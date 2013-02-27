@@ -1,8 +1,3 @@
-/**
- * 
- */
-package com.gharpay.tests;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,7 +8,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-import com.gharpay.exceptions.GharpayException;
 
 /**
  * @author arpit
@@ -21,12 +15,12 @@ import com.gharpay.exceptions.GharpayException;
  */
 public class SampleCreateOrder {
 
-    public static final String username = "xxxx" ; //Add your API Username or API Key here
-    public static final String password = "xxxx" ; //Add your API Password or API Secret here
+    public static final String username = "xxxx" ;
+    public static final String password = "xxxx" ;
     
     public static void main(String[] args){
 	
-	String xmlMessage = "<transaction> <!--Optional:--> <additionalInformation> <!--1 or more repetitions:--> <parameters> <name>InvoiceURL</name> <value>http://testUrl</value> </parameters> <parameters> <name>TicketType</name> <value>E-Ticket</value> </parameters> </additionalInformation> <customerDetails> <address>xxxxxxx</address> <contactNo>9177781351</contactNo> <!--Optional:--> <email>xxx@gmail.com</email> <firstName>xxx</firstName> <!--Optional:--> <lastName>xxxxxxxx</lastName> <!--Optional:--> <prefix>Mr.</prefix> </customerDetails> <orderDetails> <pincode>500082</pincode> <clientOrderID>Order123</clientOrderID> <deliveryDate>09-12-2011</deliveryDate> <orderAmount>1000</orderAmount> <!--Zero or more repetitions:--> <productDetails> <productID>Prod123</productID> <productQuantity>1</productQuantity> <unitCost>1000</unitCost> </productDetails> <templateID>1</templateID> </orderDetails> </transaction>" ;
+	String xmlMessage = "<transaction> <!--Optional:--> <additionalInformation> <!--1 or more repetitions:--> <parameters> <name>InvoiceURL</name> <value>http://testUrl</value> </parameters> <parameters> <name>TicketType</name> <value>E-Ticket</value> </parameters> </additionalInformation> <customerDetails> <address>xxxxxxx</address> <contactNo>1234567890</contactNo> <!--Optional:--> <email>xxx@gmail.com</email> <firstName>xxx</firstName> <!--Optional:--> <lastName>xxxxxxxx</lastName> <!--Optional:--> <prefix>Mr.</prefix> </customerDetails> <orderDetails> <pincode>500082</pincode> <clientOrderID>Order123</clientOrderID> <deliveryDate>09-12-2011</deliveryDate> <orderAmount>1000</orderAmount> <!--Zero or more repetitions:--> <productDetails> <productID>Prod123</productID> <productQuantity>1</productQuantity> <unitCost>1000</unitCost> </productDetails> <templateID>1</templateID> </orderDetails> </transaction>" ;
 	    
 	    if(username==null || password == null || username.trim().length()==0 || password.trim().length()==0){
 		System.out.println("Username/Password in rest services is null or empty") ;
